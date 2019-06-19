@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         FileManageHelp.getInstance().fileResultListener = { list ->
+
             main_msg.text = StringBuilder().run {
                 list?.forEach { append("$it\n\n") }
                 toString()

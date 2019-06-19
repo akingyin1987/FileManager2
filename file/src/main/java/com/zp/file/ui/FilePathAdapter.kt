@@ -27,6 +27,7 @@ class FilePathAdapter (private var context: Context) : RecyclerView.Adapter<File
         val bean = FilePathBean(fileBean.fileName, fileBean.filePath)
         if (list.add(bean)) {
             notifyItemInserted(list.size)
+
             listener.invoke(true)
         } else listener.invoke(false)
     }
